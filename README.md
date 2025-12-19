@@ -9,6 +9,13 @@ Using a Supervisor–Planner–Executor architecture, the system interprets natu
 The goal is a QA harness with reproducible runs, auditable traces, and clear separation between execution failures and assertion failures.
 
 
+
+**Demo video (full end-to-end run):**  
+
+[![Demo Video](demo_thumbnail.png)](https://drive.google.com/file/d/1DY2TgG5hBg4yD4AUEPjiNPkew7Si7lWC/view?usp=drive_link)
+
+**Demo video:** Click the image above to watch a full end-to-end run showing the Android emulator, real-time ADB interactions, and terminal output.
+
 ## Architecture & Agent Framework
 
 This project implements a Supervisor–Planner–Executor mobile QA agent.
@@ -185,7 +192,7 @@ Artifacts are saved under `runs/YYYYMMDD_HHMMSS/`, typically including:
 
 The runner frequently reads uiautomator XML for element targeting, and captures screenshots at key checkpoints (start/end and certain recovery/assertion points) for traceability. The Supervisor is given the run history plus end-state artifacts to make the final judgment.
 
-### Deterministic guards (intentional)
+### Deterministic guards
 To reduce LLM “hallucinated” failures, the runner includes a small set of deterministic guards:
 - sanity checks for known onboarding / app-ready states
 - task-specific validators for the intentionally failing tests (e.g., red-accent assertion checks, menu-option-not-found checks such as “Print to PDF”)
@@ -224,23 +231,6 @@ For each test case, the system produces a structured result containing:
 For this project, all FAIL outcomes are expected by design and therefore correctly classified as `NO_BUG`.
 
 In addition to the JSON verdict, the runner writes supporting artifacts (screenshots and step history/screen summaries in results.jsonl) to enable post-run inspection and reproducibility.
-
-
-## Demo Recording
-
-Recording link: *(pending)*
-
-The demo video shows:
-- the Android emulator running Obsidian,
-- the terminal executing `python main.py`,
-- real-time ADB interactions (taps, typing, navigation),
-- and the final PASS/FAIL verdicts for T1-T4 printed to the terminal.
-
-The demo intentionally includes both:
-- **passing tests**, and
-- **expected failing tests** (negative QA cases),
-
-to demonstrate correct supervisor reasoning rather than automation success alone.
 
 
 
