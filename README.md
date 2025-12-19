@@ -10,7 +10,7 @@ The goal is a QA harness with reproducible runs, auditable traces, and clear sep
 
 
 
-**Demo video (full end-to-end run):**  
+### Demo video (full end-to-end run): ###
 
 [![Demo Video](demo_thumbnail.png)](https://drive.google.com/file/d/1DY2TgG5hBg4yD4AUEPjiNPkew7Si7lWC/view?usp=drive_link)
 
