@@ -1,0 +1,5 @@
+google-generativeai>=0.8.0
+google-api-core>=2.0.0
+numpy>=1.26.0
+Pillow>=10.0.0
+google-adk
