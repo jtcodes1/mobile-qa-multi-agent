@@ -6,6 +6,13 @@ Selected framework: Google Agent Development Kit (ADK).
 1. [Google Agent Development Kit (ADK)](https://google.github.io/adk-docs/), a developer- and code-first framework for orchestrating multi-agent workflows with structured state and tool orchestration, and a model-agnostic design optimized for Gemini.
 2. [Simular Agent S3](https://www.simular.ai/articles/agent-s3), a computer-use framework aimed at scalable, high-performance GUI task completion via an Agent-Computer Interface.
 
+### Demo video (full end-to-end run): ###
+
+
+[![Demo Video](demo_thumbnail.png)](https://drive.google.com/file/d/1DY2TgG5hBg4yD4AUEPjiNPkew7Si7lWC/view?usp=drive_link)
+
+**Demo video:** Click the image above to watch a full end-to-end run showing the Android emulator, real-time ADB interactions, and terminal output.
+
 ## Decision
 ADK is used to structure the Supervisor–Planner–Executor workflow for a three-role mobile QA system:
 - Planner generates a structured JSON action plan from the natural language test cases
